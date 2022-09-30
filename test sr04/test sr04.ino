@@ -1,5 +1,5 @@
-int Trig = 2;  //pin 2 Arduino połączony z pinem Trigger czujnika
-int Echo = 3;  //pin 3 Arduino połączony z pinem Echo czujnika
+int Trig = 3;  //pin 2 Arduino połączony z pinem Trigger czujnika
+int Echo = 2;  //pin 3 Arduino połączony z pinem Echo czujnika
 int CM;        //odległość w cm
 long CZAS;     //długość powrotnego impulsu w uS
  
