@@ -27,14 +27,14 @@ void Sumo::rotateDeg(bool dir, int deg)
   {
     M1.run(255, 1);
     M2.run(255, 0);
-    delay(5*deg);
+    delay(6*deg); //było 5
     this->stop();
   }
   if (dir == 0)
   {
     M1.run(255, 0);
     M2.run(255, 1);
-    delay(5*deg);
+    delay(6*deg); //było 5
     this->stop();
   }
 }

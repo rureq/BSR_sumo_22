@@ -20,7 +20,7 @@ Sumo sumo(M1,M2);
 int search()
 {
   int distance = U1.read();
-  while(U1.read()>=40)
+  while(U1.read()>=90)//było 40
   {
     Serial.println("Searching!");
     sumo.rotate(1,255);
@@ -86,7 +86,7 @@ void escape()
   Serial.println("Escaping!");
   sumo.stop();
   sumo.drive(0, 255);
-  delay(250);
+  delay(500);
   turnaround();
   sumo.drive(1, 255);
   delay(500);
