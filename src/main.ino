@@ -3,24 +3,23 @@
 #include "sr04.h"
 #include "sumoControl.h"
 
-//dołączenie hardware'u
-LineSensor s1(A0); //sensor linii CNY70
+//attaching hardware
+LineSensor s1(A0); //line sensor CNY70
 LineSensor s2(A1);
 LineSensor s3(A3);
 
 Ultrasonic U1(8,9); //SR04 Echo,Trig
-Motor M1(6,7,4); //kanał sterownika silników L298N
+Motor M1(6,7,4); //L298N motor controller channels
 Motor M2(5,3,2);
 
 int distance = 4000;
 int new_distance = 4000;
 Sumo sumo(M1,M2);
-//int wynik = 0;
 
 int search()
 {
   int distance = U1.read();
-  while(U1.read()>=90)//było 40
+  while(U1.read()>=90)
   {
     Serial.println("Searching!");
     sumo.rotate(1,255);
@@ -97,25 +96,8 @@ void setup() {
    delay(2000);
 }
 
-
 void loop() {
   distance = search();
   Serial.println(distance);
-  chase(distance);  
-  
-  //Serial.println(s1.senseLine());
-  // delay(2000);
-  // sumo.drive(1, 255);
-  // delay(2000);
-  // sumo.drive(0,255);
-  // delay(2000);
-  // sumo.rotate(1, 255);
-  // delay(2000);
-  // sumo.rotate(0,255);
-  // delay(2000);
-  //M1.run(255,1);
-  //M1.stop();
-  //wynik = U1.read();
-  //Serial.println(wynik);
-  
+  chase(distance);   
 }

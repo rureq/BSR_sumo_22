@@ -1,0 +1,4 @@
+*.exe
+blink.py
+src/data/
+.vscode
