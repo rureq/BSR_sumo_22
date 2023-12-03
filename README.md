@@ -1,5 +1,5 @@
 ## BSR_sumo_22
-Very basic sumo robot built for hackathon at BSR  
+Very basic sumo robot built for a student's hackathon at BSR in our (teachers') free time.
 <br/>
 ### Authors:  
 rureq  
